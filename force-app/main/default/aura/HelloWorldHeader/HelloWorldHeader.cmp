@@ -1,0 +1,7 @@
+<!--
+ - Created by masaoudtm on 5/29/17.
+ -->
+
+<aura:component description="HelloWorldHeader">
+    <p> THIS IS A HEADER</p>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component >
+
+	<c:HelloWorldHeader />
+	
+	<p>Hello Masaoud Moonim</p>
+</aura:component>

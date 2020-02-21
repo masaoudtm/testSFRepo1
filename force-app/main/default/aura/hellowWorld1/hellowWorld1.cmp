@@ -1,0 +1,7 @@
+<!--
+ - Created by masaoudtm on 5/27/17.
+ -->
+
+<aura:component description="hellowWorld1">
+    <p>This is a test</p>
+</aura:component>

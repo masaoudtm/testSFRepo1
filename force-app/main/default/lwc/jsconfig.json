@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/simpletreemenu": [
+                "../staticresources/simpletreemenu/simpletreemenu.js"
+            ],
+            "c/helloTest": [
+                "helloTest/helloTest.js"
+            ],
+            "c/helloWorld1": [
+                "helloWorld1/helloWorld1.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

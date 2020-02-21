@@ -1,0 +1,61 @@
+<apex:page id="loginPage" showHeader="false" title="{!$Label.site.site_login}">
+  <apex:composition template="{!$Site.Template}">
+    <apex:define name="body">  
+      <center>
+        <apex:panelGrid bgcolor="white" columns="1"> 
+          <br/>
+          <br/>
+          <apex:panelGrid width="758" cellpadding="0" cellspacing="0" bgcolor="white" columns="1" styleClass="topPanelContainer"> 
+            <br/>
+            <apex:outputPanel layout="block" styleClass="topPanel">
+              <apex:panelGrid width="758" cellpadding="0" cellspacing="0" bgcolor="white" columns="2"> 
+                <apex:image url="{!URLFOR($Resource.SiteSamples, 'img/clock.png')}"/>
+                <apex:panelGroup >
+                  <br/>
+                  <apex:outputText styleClass="title" value="{!$Label.site.login}"/>
+                  <br/>
+                  <c:SiteLogin id="siteLogin"/>
+                  <br/>
+                  <div id="janrainEngageEmbed"></div>
+                  <br/>
+                </apex:panelGroup>
+              </apex:panelGrid> 
+             </apex:outputPanel>
+            <c:SitePoweredBy />
+          </apex:panelGrid> 
+       </apex:panelGrid>
+      </center>
+      <br/>
+    </apex:define>
+  </apex:composition>
+  
+ <script type="text/javascript">
+(function() {
+    if (typeof window.janrain !== 'object') window.janrain = {};
+    if (typeof window.janrain.settings !== 'object') window.janrain.settings = {};
+    
+    janrain.settings.tokenUrl = 'https://mtmmydomain-dev-ed.my.salesforce.com/services/authcallback/00D400000008b11EAA/JanRain1?flowtype=sso&community='+encodeURIComponent('https://mtmcommunity-developer-edition.na2.force.com/communityone');
+
+    function isReady() { janrain.ready = true; };
+    if (document.addEventListener) {
+      document.addEventListener("DOMContentLoaded", isReady, false);
+    } else {
+      window.attachEvent('onload', isReady);
+    }
+
+    var e = document.createElement('script');
+    e.type = 'text/javascript';
+    e.id = 'janrainAuthWidget';
+
+    if (document.location.protocol === 'https:') {
+      e.src = 'https://rpxnow.com/js/lib/testmtm/engage.js';
+    } else {
+      e.src = 'http://widget-cdn.rpxnow.com/js/lib/testmtm/engage.js';
+    }
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(e, s);
+})();
+</script>
+ 
+</apex:page>
